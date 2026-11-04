@@ -19,11 +19,9 @@
 
 Watch the synchronized dual-feed demonstration showing the **physical camera hopper view** simultaneously alongside the **live Raspberry Pi 5 Arm Cortex-A76 terminal execution**, achieving **100.00% Statutory Compliance**, **100.0% Battery Hazard Recall**, and **5.09 ms Inference Latency** operating at **49.9°C**:
 
-<video src="assets/EcoSort_Edge_Jury_Showcase.mp4" controls="controls" width="100%" poster="assets/jury_showcase_preview.jpg">
-  Your browser does not support playing this video. You can <a href="assets/EcoSort_Edge_Jury_Showcase.mp4">download and play the video here</a>.
-</video>
+![EcoSort-Edge Physical & Edge AI Live Jury Demonstration](assets/jury_showcase_panel.gif)
 
-> 📹 **Direct Download / Play:** [Click here to watch `assets/EcoSort_Edge_Jury_Showcase.mp4` (Full 1080p Synchronized Video, 17.2 MB)](assets/EcoSort_Edge_Jury_Showcase.mp4)  
+> 📹 **HD Video Download:** [`assets/EcoSort_Edge_Jury_Showcase.mp4` (Full 1080p Synchronized Video, 17.2 MB)](assets/EcoSort_Edge_Jury_Showcase.mp4)  
 > ⚡ **Standalone Screen Recording:** [`assets/R1_Screen_recording.mp4` (Full HD, 10.8 MB)](assets/R1_Screen_recording.mp4)
 
 ---

@@ -24,6 +24,7 @@ Thumbs.db
 
 # Large raw video in root (assets/ contains the web-optimized streamable video)
 /R1_Screen_recording.mp4
+/camara_rec.mp4
 
 # Only keep the quantized .pte deployment binaries in models/
 models/*.pth
