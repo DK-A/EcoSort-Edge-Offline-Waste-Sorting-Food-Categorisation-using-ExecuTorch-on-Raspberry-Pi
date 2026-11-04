@@ -1,0 +1,32 @@
+# Data & Raw Datasets (Do NOT commit heavy image datasets to GitHub)
+data/
+archive/
+outputs/
+results/
+temp/
+tmp/
+
+# Python & Environment
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.venv/
+env/
+venv/
+ENV/
+
+# OS & Office Lock Files
+.DS_Store
+Thumbs.db
+~$*.docx
+~$*.pptx
+
+# Large raw video in root (assets/ contains the web-optimized streamable video)
+/R1_Screen_recording.mp4
+
+# Only keep the quantized .pte deployment binaries in models/
+models/*.pth
+models/*.pt
+!models/waste_classifier_int8.pte
+!models/mobilenetv3_large_int8.pte
