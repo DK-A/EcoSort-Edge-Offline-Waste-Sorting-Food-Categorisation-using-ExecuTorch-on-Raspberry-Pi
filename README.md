@@ -15,18 +15,16 @@
 
 ---
 
-## 🎬 Live Physical Benchmark Execution (R1 Screen Recording)
+## 🎬 Live Physical Benchmark Execution (Dual-View Jury Showcase)
 
-Watch EcoSort-Edge execute the official 30-image physical benchmark suite natively on the Raspberry Pi 5 CPU, achieving **100.00% Statutory Compliance**, **100.0% Battery Hazard Recall**, and **5.09 ms Inference Latency** operating at **49.9°C**:
+Watch the synchronized dual-feed demonstration showing the **physical camera hopper view** simultaneously alongside the **live Raspberry Pi 5 Arm Cortex-A76 terminal execution**, achieving **100.00% Statutory Compliance**, **100.0% Battery Hazard Recall**, and **5.09 ms Inference Latency** operating at **49.9°C**:
 
-https://github.com/user-attachments/assets/9d8b1853-4882-4147-975a-7339832cb715
-
-<video src="assets/R1_Screen_recording.mp4" controls="controls" width="100%" poster="assets/solution_architecture.png">
-  Your browser does not support playing this video. You can <a href="assets/R1_Screen_recording.mp4">download and play the video here</a>.
+<video src="assets/EcoSort_Edge_Jury_Showcase.mp4" controls="controls" width="100%" poster="assets/jury_showcase_preview.jpg">
+  Your browser does not support playing this video. You can <a href="assets/EcoSort_Edge_Jury_Showcase.mp4">download and play the video here</a>.
 </video>
 
-> 📹 **Direct Video Link:** [Click here to view / download `assets/R1_Screen_recording.mp4` (Full 1080p HD, 10.8 MB)](assets/R1_Screen_recording.mp4)  
-> ⚡ **Quick Web Stream Alternative:** [`assets/demo_video.mp4` (720p HD, 3.4 MB)](assets/demo_video.mp4)
+> 📹 **Direct Download / Play:** [Click here to watch `assets/EcoSort_Edge_Jury_Showcase.mp4` (Full 1080p Synchronized Video, 17.2 MB)](assets/EcoSort_Edge_Jury_Showcase.mp4)  
+> ⚡ **Standalone Screen Recording:** [`assets/R1_Screen_recording.mp4` (Full HD, 10.8 MB)](assets/R1_Screen_recording.mp4)
 
 ---
 
