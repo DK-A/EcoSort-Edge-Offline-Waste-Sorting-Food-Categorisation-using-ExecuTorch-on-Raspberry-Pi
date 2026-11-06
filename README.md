@@ -9,6 +9,7 @@
 [![Safety](https://img.shields.io/badge/Battery%20Fire%20Recall-100.0%25%20(Zero%20Fire%20Risk)-EF4444?style=for-the-badge)](#-deterministic-policy-guard-dpg--bayes-risk)
 [![Research Paper](https://img.shields.io/badge/Research%20Paper-IEEE%20PDF-DC2626?style=for-the-badge&logo=adobeacrobatreader)](THEME_3_NAMMA_AI.pdf)
 [![License](https://img.shields.io/badge/License-MIT-EAB308?style=for-the-badge)](LICENSE)
+[![CI Smoke Test](https://img.shields.io/github/actions/workflow/status/DK-A/EcoSort-Edge-Offline-Waste-Sorting-Food-Categorisation-using-ExecuTorch-on-Raspberry-Pi/smoke_test.yml?branch=main&label=CI%20Smoke%20Test&style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com/DK-A/EcoSort-Edge-Offline-Waste-Sorting-Food-Categorisation-using-ExecuTorch-on-Raspberry-Pi/actions)
 
 > **Official Solution for Problem Statement 3:** Edge-Based Waste Sorting and Food Categorisation  
 > **Organized by:** NASSCOM CoE IoT & AI, Arm Developer Ecosystem, IIIT-Bangalore, UK Govt TSI  
