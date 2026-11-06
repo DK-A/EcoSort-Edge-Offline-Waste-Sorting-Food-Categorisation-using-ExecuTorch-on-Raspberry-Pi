@@ -7,7 +7,7 @@
 [![Model Size](https://img.shields.io/badge/Model%20Size-2.41%20MB%20(PT2E%20INT8)-8B5CF6?style=for-the-badge)](#exhaustive-model-ablation--trade-off-analysis)
 [![Compliance](https://img.shields.io/badge/MoEFCC%20SWM%202026-100%25%20Statutory%20Compliant-059669?style=for-the-badge)](#-statutory-swm-rules-2026-stream-mapping)
 [![Safety](https://img.shields.io/badge/Battery%20Fire%20Recall-100.0%25%20(Zero%20Fire%20Risk)-EF4444?style=for-the-badge)](#-deterministic-policy-guard-dpg--bayes-risk)
-[![Research Paper](https://img.shields.io/badge/Research%20Paper-IEEE%20PDF-DC2626?style=for-the-badge&logo=adobeacrobatreader)](https://github.com/DK-A/EcoSort-Edge-Offline-Waste-Sorting-Food-Categorisation-using-ExecuTorch-on-Raspberry-Pi/raw/main/THEME_3_NAMMA_AI.pdf)
+[![Research Paper](https://img.shields.io/badge/Research%20Paper-View%20PDF-DC2626?style=for-the-badge&logo=adobeacrobatreader)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/DK-A/EcoSort-Edge-Offline-Waste-Sorting-Food-Categorisation-using-ExecuTorch-on-Raspberry-Pi/main/THEME_3_NAMMA_AI.pdf)
 [![Read Online](https://img.shields.io/badge/Read%20Paper-Markdown%20Doc-2563EB?style=for-the-badge&logo=markdown)](docs/IEEE_ECOSORT_EDGE_TECHNICAL_PROPOSAL.md)
 [![License](https://img.shields.io/badge/License-MIT-EAB308?style=for-the-badge)](LICENSE)
 [![CI Smoke Test](https://img.shields.io/github/actions/workflow/status/DK-A/EcoSort-Edge-Offline-Waste-Sorting-Food-Categorisation-using-ExecuTorch-on-Raspberry-Pi/smoke_test.yml?branch=main&label=CI%20Smoke%20Test&style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com/DK-A/EcoSort-Edge-Offline-Waste-Sorting-Food-Categorisation-using-ExecuTorch-on-Raspberry-Pi/actions)
@@ -271,7 +271,8 @@ python evaluate_pipeline.py --daemon
 ## IEEE Technical Proposal & Research Paper
 
 For full mathematical proofs, quantization derivation, and comprehensive engineering defense, refer to the official Microsoft Word Document:  
-* 📄 **[Open / Download IEEE Research Paper (THEME_3_NAMMA_AI.pdf)](https://github.com/DK-A/EcoSort-Edge-Offline-Waste-Sorting-Food-Categorisation-using-ExecuTorch-on-Raspberry-Pi/raw/main/THEME_3_NAMMA_AI.pdf)** *(Official 9-page IEEE format PDF)*
+* 📄 **[View 9-Page IEEE Research Paper Online (PDF)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/DK-A/EcoSort-Edge-Offline-Waste-Sorting-Food-Categorisation-using-ExecuTorch-on-Raspberry-Pi/main/THEME_3_NAMMA_AI.pdf)** *(Zero download required — opens instantly in browser)*
+* 📥 **[Direct Download PDF (THEME_3_NAMMA_AI.pdf)](https://raw.githubusercontent.com/DK-A/EcoSort-Edge-Offline-Waste-Sorting-Food-Categorisation-using-ExecuTorch-on-Raspberry-Pi/main/THEME_3_NAMMA_AI.pdf)** *(Direct 1.02 MB binary download)*
 * 📖 **[Read Full Paper in GitHub Markdown](docs/IEEE_ECOSORT_EDGE_TECHNICAL_PROPOSAL.md)** *(Instant in-browser reading with tables & equations)*
 * 📝 **[Download Microsoft Word Proposal (.docx)](https://github.com/DK-A/EcoSort-Edge-Offline-Waste-Sorting-Food-Categorisation-using-ExecuTorch-on-Raspberry-Pi/raw/main/EcoSort_Edge_IEEE_Technical_Proposal.docx)** *(Extended 12-page proposal with 7 structured tables)*
 
