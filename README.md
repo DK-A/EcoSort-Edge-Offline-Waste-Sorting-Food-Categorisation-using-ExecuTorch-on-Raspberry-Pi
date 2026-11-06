@@ -1,10 +1,10 @@
-# 🌿 EcoSort-Edge: Deterministic Edge AI Waste Sorting Appliance on Arm Cortex-A76 via ExecuTorch INT8
+# EcoSort-Edge: Deterministic Edge AI Waste Sorting Appliance on Arm Cortex-A76 via ExecuTorch INT8
 
 [![Track](https://img.shields.io/badge/Namma%20AI%20Hackathon-Track%203%3A%20AI%20for%20Sustainability-10B981?style=for-the-badge&logo=arm)](https://github.com/DK-A/EcoSort-Edge-Offline-Waste-Sorting-Food-Categorisation-using-ExecuTorch-on-Raspberry-Pi)
 [![Hardware](https://img.shields.io/badge/Hardware-Raspberry%20Pi%205%20(Arm%20Cortex--A76)-3B82F6?style=for-the-badge&logo=raspberrypi)](https://www.raspberrypi.com)
 [![Runtime](https://img.shields.io/badge/Runtime-Arm%20ExecuTorch%201.5.1%20(XNNPACK)-6366F1?style=for-the-badge&logo=pytorch)](https://pytorch.org/executorch)
-[![Latency](https://img.shields.io/badge/Latency-5.09%20ms%20(~197%20FPS)-06B6D4?style=for-the-badge)](#-physical-raspberry-pi-5-benchmark--telemetry)
-[![Model Size](https://img.shields.io/badge/Model%20Size-2.41%20MB%20(PT2E%20INT8)-8B5CF6?style=for-the-badge)](#-exhaustive-model-ablation--trade-off-analysis)
+[![Latency](https://img.shields.io/badge/Latency-5.09%20ms%20(~197%20FPS)-06B6D4?style=for-the-badge)](#physical-raspberry-pi-5-benchmark--telemetry)
+[![Model Size](https://img.shields.io/badge/Model%20Size-2.41%20MB%20(PT2E%20INT8)-8B5CF6?style=for-the-badge)](#exhaustive-model-ablation--trade-off-analysis)
 [![Compliance](https://img.shields.io/badge/MoEFCC%20SWM%202026-100%25%20Statutory%20Compliant-059669?style=for-the-badge)](#-statutory-swm-rules-2026-stream-mapping)
 [![Safety](https://img.shields.io/badge/Battery%20Fire%20Recall-100.0%25%20(Zero%20Fire%20Risk)-EF4444?style=for-the-badge)](#-deterministic-policy-guard-dpg--bayes-risk)
 
@@ -15,7 +15,7 @@
 
 ---
 
-## 🎬 Live Physical Benchmark Execution (Dual-View Jury Showcase)
+## Live Physical Benchmark Execution (Dual-View Jury Showcase)
 
 Watch the synchronized dual-feed demonstration showing the **physical camera hopper view** simultaneously alongside the **live Raspberry Pi 5 Arm Cortex-A76 terminal execution**, achieving **100.00% Statutory Compliance**, **100.0% Battery Hazard Recall**, and **5.09 ms Inference Latency** operating at **49.9°C**:
 
@@ -26,7 +26,7 @@ Watch the synchronized dual-feed demonstration showing the **physical camera hop
 
 ---
 
-## 🏗️ High-Resolution Solution Architecture
+## High-Resolution Solution Architecture
 
 EcoSort-Edge enforces an architectural tripartite paradigm: **"Vision Perceives, Deterministic Rules Decide, Offline Vernacular Guides"**.
 
@@ -69,7 +69,7 @@ EcoSort-Edge enforces an architectural tripartite paradigm: **"Vision Perceives,
 
 ---
 
-## 🏛️ Statutory SWM Rules 2026 Regulatory Alignment
+## Statutory SWM Rules 2026 Regulatory Alignment
 
 In January 2026, the **Ministry of Environment, Forest and Climate Change (MoEFCC)** notified the revised **Solid Waste Management Rules 2026** (effective April 2026), mandating strict 4-stream source segregation. 
 
@@ -97,7 +97,7 @@ In January 2026, the **Ministry of Environment, Forest and Climate Change (MoEFC
 
 ---
 
-## 🔬 Exhaustive Model Ablation & Trade-Off Analysis
+## Exhaustive Model Ablation & Trade-Off Analysis
 
 To justify model selection, we conducted a head-to-head empirical ablation comparing our **Champion MobileNetV3-Small INT8** model against a **Peer Baseline MobileNetV3-Large INT8** model. Both models were compiled via **ExecuTorch 1.5.1 with XNNPACK** and evaluated across the canonical 30-image physical benchmark on the Raspberry Pi 5 CPU:
 
@@ -121,7 +121,7 @@ To justify model selection, we conducted a head-to-head empirical ablation compa
 
 ---
 
-## ⚡ PyTorch 2 Export (PT2E) INT8 Quantization Parity
+## PyTorch 2 Export (PT2E) INT8 Quantization Parity
 
 Quantizing the model via ExecuTorch's XNNPACK backend with per-channel symmetric weights and runtime dynamic activations achieved near-zero accuracy drop across the complete **1,197-image holdout validation split**:
 
@@ -139,7 +139,7 @@ Quantizing the model via ExecuTorch's XNNPACK backend with per-channel symmetric
 
 ---
 
-## 📈 Model Evaluation, Confusion Matrix & Training Analytics
+## Model Evaluation, Confusion Matrix & Training Analytics
 
 ### 1. Normalized Confusion Matrix (9-Class Holdout Split)
 Evaluated across the 1,210-image holdout test split. Notice **96.7% Battery Recall** with zero misrouting into combustible or dry recyclable compactor streams:
@@ -163,7 +163,7 @@ Empirical evidence on Raspberry Pi 5 CPU showing why MobileNetV3-Small eliminate
 
 ---
 
-## 📊 Physical Raspberry Pi 5 Benchmark & Telemetry
+## Physical Raspberry Pi 5 Benchmark & Telemetry
 
 ### Deliverable D3: Canonical 30-Image Evaluation Suite
 Tested natively on Raspberry Pi 5 (4× Arm Cortex-A76 @ 2.4 GHz):
@@ -213,7 +213,7 @@ Tested natively on Raspberry Pi 5 (4× Arm Cortex-A76 @ 2.4 GHz):
 
 ---
 
-## 🗣️ Offline Vernacular Audio Guidance
+## Offline Vernacular Audio Guidance
 
 To eliminate usability barriers for citizens and Pourakarmikas (sanitation workers) across Bengaluru and Karnataka, EcoSort-Edge includes pre-rendered, zero-latency PCM audio coaching:
 
@@ -227,7 +227,7 @@ To eliminate usability barriers for citizens and Pourakarmikas (sanitation worke
 
 ---
 
-## 🚀 Quickstart & Reproduction Guide
+## Quickstart & Reproduction Guide
 
 ### 1. Clone the Repository
 ```bash
@@ -263,14 +263,14 @@ python evaluate_pipeline.py --daemon
 
 ---
 
-## 📄 IEEE Technical Proposal Document
+## IEEE Technical Proposal Document
 
 For full mathematical proofs, quantization derivation, and comprehensive engineering defense, refer to the official Microsoft Word Document:  
 👉 **[EcoSort_Edge_IEEE_Technical_Proposal.docx](EcoSort_Edge_IEEE_Technical_Proposal.docx)** (12 pages, 4,560 words, 7 structured tables)
 
 ---
 
-## 👥 Authors & Acknowledgments
+## Authors & Acknowledgments
 
 * **Project:** EcoSort-Edge (Track 3: AI for Sustainability, Problem Statement 3)
 * **Organized by:** NASSCOM Centre of Excellence IoT & AI, Arm Developer Ecosystem, IIIT-Bangalore, UK Government Technology and Sustainable Infrastructure (TSI) Initiative
