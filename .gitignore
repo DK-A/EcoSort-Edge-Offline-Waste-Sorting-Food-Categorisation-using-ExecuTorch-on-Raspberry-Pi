@@ -2,7 +2,8 @@
 data/
 archive/
 outputs/
-results/
+results/*
+!results/*.json
 temp/
 tmp/
 

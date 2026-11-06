@@ -21,7 +21,7 @@ Watch the synchronized dual-feed demonstration showing the **physical camera hop
 
 ![EcoSort-Edge Physical & Edge AI Live Jury Demonstration](assets/jury_showcase_panel.gif)
 
-> 📹 **HD Video Download:** [`assets/EcoSort_Edge_Jury_Showcase.mp4` (Full 1080p Synchronized Video, 17.2 MB)](assets/EcoSort_Edge_Jury_Showcase.mp4)  
+> 📹 **HD Video Download:** [`assets/DEMO.mp4` (Full 1080p Synchronized Video, 17.2 MB)](assets/DEMO.mp4)  
 > ⚡ **Standalone Screen Recording:** [`assets/R1_Screen_recording.mp4` (Full HD, 10.8 MB)](assets/R1_Screen_recording.mp4)
 
 ---
@@ -136,6 +136,30 @@ Quantizing the model via ExecuTorch's XNNPACK backend with per-channel symmetric
 | **Metal Can Precision** | 91.73% (122 / 133) | **91.73% (122 / 133)** | **0.00%** | **PASSED** |
 | **Multi-Layer Pkg Recall**| 85.19% (115 / 135) | **85.19% (115 / 135)** | **0.00%** | **PASSED** |
 | **Inference Latency** | 18.42 ms (FP32 Native) | **5.09 ms (INT8 NEON)** | **3.62× Speedup**| **PASSED** (10× Margin) |
+
+---
+
+## 📈 Model Evaluation, Confusion Matrix & Training Analytics
+
+### 1. Normalized Confusion Matrix (9-Class Holdout Split)
+Evaluated across the 1,210-image holdout test split. Notice **96.7% Battery Recall** with zero misrouting into combustible or dry recyclable compactor streams:
+
+![EcoSort-Edge Confusion Matrix](assets/confusion_matrix.png)
+
+### 2. Training Convergence & Progressive Resizing Curves
+16-epoch training progression showing loss minimization under Cost-Weighted Cross-Entropy Loss and accuracy boost from Progressive Resizing (224×224 Baseline → 256×256 High-Resolution Fine-Tuning):
+
+![EcoSort-Edge Training & Validation Curves](assets/training_curves.png)
+
+### 3. Per-Class Precision, Recall & F1-Score
+Granular performance across all 9 municipal waste classes aligned with India MoEFCC SWM Rules 2026:
+
+![EcoSort-Edge Per-Class Performance](assets/per_class_performance.png)
+
+### 4. Comprehensive Model Ablation (Champion V3-Small vs Peer V3-Large)
+Empirical evidence on Raspberry Pi 5 CPU showing why MobileNetV3-Small eliminates cache thrashing, achieves 3.4× lower latency, and prevents compactor fires:
+
+![EcoSort-Edge Model Ablation](assets/model_ablation_comparison.png)
 
 ---
 
