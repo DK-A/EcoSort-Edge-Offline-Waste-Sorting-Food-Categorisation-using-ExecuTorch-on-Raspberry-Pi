@@ -11,6 +11,7 @@
 [![Read Online](https://img.shields.io/badge/Read%20Paper-Markdown%20Doc-2563EB?style=for-the-badge&logo=markdown)](docs/IEEE_ECOSORT_EDGE_TECHNICAL_PROPOSAL.md)
 [![License](https://img.shields.io/badge/License-MIT-EAB308?style=for-the-badge)](LICENSE)
 [![CI Smoke Test](https://img.shields.io/github/actions/workflow/status/DK-A/EcoSort-Edge-Offline-Waste-Sorting-Food-Categorisation-using-ExecuTorch-on-Raspberry-Pi/smoke_test.yml?branch=main&label=CI%20Smoke%20Test&style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com/DK-A/EcoSort-Edge-Offline-Waste-Sorting-Food-Categorisation-using-ExecuTorch-on-Raspberry-Pi/actions)
+[![Stress Test](https://img.shields.io/badge/Stress%20Test-Passed%20(Zero%20Leaks)-059669?style=for-the-badge)](docs/RELIABILITY_AND_STRESS_TESTS.md)
 
 > **Official Solution for Problem Statement 3:** Edge-Based Waste Sorting and Food Categorisation  
 > **Organized by:** NASSCOM CoE IoT & AI, Arm Developer Ecosystem, IIIT-Bangalore, UK Govt TSI  
@@ -229,6 +230,20 @@ EcoSort-Edge provides instantaneous visual feedback and structured telemetry dir
 | **🔴 Red (Hazard)** | Lithium / Dry Battery | Critical Fire Hazard ($\tau \ge 85.0\%$) | Extended Producer Responsibility (EPR) Hazardous Safe Bay |
 | **🟡 Yellow (Sanitary)** | Hygiene Discards | Incineration grade | High-Temperature Thermal Incinerators |
 | **⚪ Grey (Hold)** | Ambiguous Object ($H > 2.0$) | High Shannon Entropy uncertainty | Manual Inspection Hold (Prevents Blind Contamination) |
+
+---
+
+## Automated Stress Testing & Safety Policy Verification
+
+To evaluate 24/7 appliance durability and prevent edge-case failures, the repository includes three automated audit suites:
+
+👉 **[Detailed Engineering Report & Telemetry: docs/RELIABILITY_AND_STRESS_TESTS.md](docs/RELIABILITY_AND_STRESS_TESTS.md)**
+
+| Test Suite | Purpose & Method | Measured Result | Evaluation Status |
+| :--- | :--- | :--- | :---: |
+| `python verify_solution.py` | 5-point integrity audit of models, dataset, policy, and audio | 5 / 5 Checks Verified | **PASS (100% Operational)** |
+| `python scripts/run_stress_test.py` | 200-cycle continuous inference & memory leak audit | **+0.02 MB** growth, **170.9 FPS**, P95: **6.33 ms** | **PASS (Zero Memory Leaks)** |
+| `python scripts/test_ood_and_safety_guard.py` | Shannon Entropy ($H > 1.4$) & Bayes Risk ($\tau = 85\%$) | OOD items held, borderline battery isolated | **PASS (100% Safe)** |
 
 ---
 
