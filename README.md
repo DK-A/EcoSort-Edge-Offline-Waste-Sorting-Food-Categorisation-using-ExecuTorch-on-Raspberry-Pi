@@ -11,7 +11,7 @@
 > **Official Solution for Problem Statement 3:** Edge-Based Waste Sorting and Food Categorisation  
 > **Organized by:** NASSCOM CoE IoT & AI, Arm Developer Ecosystem, IIIT-Bangalore, UK Govt TSI  
 > **Target Appliance:** 100% Offline, Air-Gapped Raspberry Pi 5 (4× Arm Cortex-A76 @ 2.4 GHz)  
-> **Core Architecture:** MobileNetV3-Small PT2E INT8 | Arm ExecuTorch XNNPACK | Deterministic Policy Guard | Offline Vernacular Audio  
+> **Core Architecture:** MobileNetV3-Small PT2E INT8 | Arm ExecuTorch XNNPACK | Deterministic Policy Guard | Zero-Latency Edge Telemetry  
 
 ---
 
@@ -28,18 +28,18 @@ Watch the synchronized dual-feed demonstration showing the **physical camera hop
 
 ## High-Resolution Solution Architecture
 
-EcoSort-Edge enforces an architectural tripartite paradigm: **"Vision Perceives, Deterministic Rules Decide, Offline Vernacular Guides"**.
+EcoSort-Edge enforces an architectural dual-guard paradigm: **"Edge Vision Perceives, Deterministic Policy Decides"**.
 
 ![EcoSort-Edge Solution Architecture](assets/solution_architecture.png)
 
 ```
                        [ ECO SORT-EDGE SYSTEM PIPELINE ]
                        
-  [ STAGE 1: SENSORY & PRIVACY INPUT ]
+  [ STAGE 1: LOCAL INPUT ACQUISITION ]
       │
-      ├── Optical Wide-Angle Camera ───► 256x256 RGB Tensor Input (ImageNet Normalized)
+      ├── Optical Camera Feed / Benchmark ──► 256x256 RGB Tensor Input (ImageNet Normalized)
       │
-      └── Tactile Push-Button ─────────► Bypasses Vision Camera (Privacy-by-Design Sanitary Flap)
+      └── Privacy-by-Design Execution ─────► 100% In-Memory RAM Processing (Zero Cloud Streaming)
                                           (Fully compliant with India's DPDP Act 2023)
       │
   [ STAGE 2: ARM EXECUTORCH RUNTIME CORE ]
@@ -57,14 +57,14 @@ EcoSort-Edge enforces an architectural tripartite paradigm: **"Vision Perceives,
       └── Cost-Sensitive Bayes Risk ──► C(Battery -> Dry) = ∞ ──► Enforce τ = 85.0% Safety Barrier
                                           (100.0% Battery Hazard Recall | Zero Compactor Fires)
       │
-  [ STAGE 4: STATUTORY SWM 2026 ACTUATION & VERNACULAR AUDIO ]
+  [ STAGE 4: STATUTORY CATEGORISATION & REAL-TIME TELEMETRY ]
       │
       ├── 🟢 Green Stream ────────────► Wet Organic (Biomethanation / Ward Composting)
       ├── 🔵 Blue Stream ─────────────► Dry Recyclable + Multi-Layer Packaging (Cement Kiln RDF)
-      ├── 🟡 Yellow Stream ───────────► Sanitary Waste (High-Temp Incineration via Tactile Button)
+      ├── 🟡 Yellow Stream ───────────► Sanitary Waste (High-Temp Incineration)
       ├── 🔴 Red Stream ──────────────► Special-Care Domestic Hazardous (Batteries - Fire Elimination)
-      ├── ⚪ Grey Stream ─────────────► Manual Review Bay (Ambiguous High-Entropy Hold)
-      └── 🔊 Offline Vernacular Audio ─► Dual-Dialect Kannada (ಕನ್ನಡ) & Hindi (हिंदी) Zero Latency
+      ├── ⚪ Grey Stream ─────────────► Manual Review Flag (Ambiguous High-Entropy Hold)
+      └── 📊 Visual Telemetry & JSON ─────► Real-Time On-Screen Overlay (<15 ms End-to-End Cycle)
 ```
 
 ---
@@ -213,17 +213,18 @@ Tested natively on Raspberry Pi 5 (4× Arm Cortex-A76 @ 2.4 GHz):
 
 ---
 
-## Offline Vernacular Audio Guidance
+## 🛡️ Statutory Categorisation & Real-Time Edge Telemetry
 
-To eliminate usability barriers for citizens and Pourakarmikas (sanitation workers) across Bengaluru and Karnataka, EcoSort-Edge includes pre-rendered, zero-latency PCM audio coaching:
+EcoSort-Edge provides instantaneous visual feedback and structured telemetry directly on the device display, enabling automated sorting decisions and clear visibility into waste streams without cloud dependence:
 
-| Waste Stream | Detected Category | Spoken Kannada Script (ಕನ್ನಡ) | Spoken Hindi Script (हिंदी) |
+| Waste Stream | Detected Category | Classification Rule & Action | Statutory End-of-Life Destination |
 | :--- | :--- | :--- | :--- |
-| **🟢 Green (Wet)** | Food / Vegetables | "ಇದು ಹಸಿ ಕಸ. ಪ್ಲಾಸ್ಟಿಕ್ ಇಲ್ಲದೆ ಹಸಿರು ಡಬ್ಬಿಗೆ ಹಾಕಿ." | "यह गीला कचरा है। बिना प्लास्टिक के हरे डिब्बे में डालें।" |
-| **🔵 Blue (Dry)** | Paper / Cardboard / Bottle | "ಇದು ಒಣ ಕಸ. ಸ್ವಚ್ಛವಾಗಿ ನೀಲಿ ಡಬ್ಬಿಗೆ ಹಾಕಿ." | "यह सूखा कचरा है। कृपया साफ करके नीले डिब्बे में डालें।" |
-| **🔵 Blue (RDF)** | Multi-Layer Packaging | "ಮಲ್ಟಿ-ಲೇಯರ್ ಪ್ಯಾಕಿಂಗ್. ಒಣ ಕಸದ ನೀಲಿ ಡಬ್ಬಿಗೆ ಹಾಕಿ (ಸಿಮೆಂಟ್ ಸ್ಥಾವರಕ್ಕೆ)." | "मल्टी-लेयर पैकेट। नीले डिब्बे में डालें (सीमेंट प्लांट RDF)।" |
-| **🔴 Red (Hazard)** | Lithium / Dry Battery | "ಎಚ್ಚರಿಕೆ: ಇದು ಬ್ಯಾಟರಿ! ಕೆಂಪು ಡಬ್ಬಿಗೆ ಹಾಕಿ (ಬೆಂಕಿ ಅಪಾಯ!)." | "चेतावनी: यह बैटरी है! लाल डिब्बे में डालें (आग का खतरा!)।" |
-| **⚪ Grey (Hold)** | Ambiguous Object ($H > 2.0$) | "ವಸ್ತು ಗುರುತಿಸಲಾಗಿಲ್ಲ. ದಯವಿಟ್ಟು ಪರಿಶೀಲನೆಗೆ ಇರಿಸಿ." | "वस्तु पहचानी नहीं गई। कृपया समीक्षा के लिए अलग रखें।" |
+| **🟢 Green (Wet)** | Food / Vegetables | High-confidence biodegradable organics | Decentralized Ward Composting / Biomethanation |
+| **🔵 Blue (Dry)** | Paper / Cardboard / Bottle | Recyclable dry material | Material Recovery Facilities (MRFs) |
+| **🔵 Blue (RDF)** | Multi-Layer Packaging | Metallized laminates & snack packaging | Cement Kiln Co-Processing (Refuse-Derived Fuel) |
+| **🔴 Red (Hazard)** | Lithium / Dry Battery | Critical Fire Hazard ($\tau \ge 85.0\%$) | Extended Producer Responsibility (EPR) Hazardous Safe Bay |
+| **🟡 Yellow (Sanitary)** | Hygiene Discards | Incineration grade | High-Temperature Thermal Incinerators |
+| **⚪ Grey (Hold)** | Ambiguous Object ($H > 2.0$) | High Shannon Entropy uncertainty | Manual Inspection Hold (Prevents Blind Contamination) |
 
 ---
 
