@@ -1,17 +1,20 @@
 # EcoSort-Edge: Deterministic Edge AI Waste Sorting Appliance on Arm Cortex-A76 via ExecuTorch INT8
 
-[![Track](https://img.shields.io/badge/Namma%20AI%20Hackathon-Track%203%3A%20AI%20for%20Sustainability-10B981?style=for-the-badge&logo=arm)](https://github.com/DK-A/EcoSort-Edge-Offline-Waste-Sorting-Food-Categorisation-using-ExecuTorch-on-Raspberry-Pi)
-[![Hardware](https://img.shields.io/badge/Hardware-Raspberry%20Pi%205%20(Arm%20Cortex--A76)-3B82F6?style=for-the-badge&logo=raspberrypi)](https://www.raspberrypi.com)
-[![Runtime](https://img.shields.io/badge/Runtime-Arm%20ExecuTorch%201.5.1%20(XNNPACK)-6366F1?style=for-the-badge&logo=pytorch)](https://pytorch.org/executorch)
-[![Latency](https://img.shields.io/badge/Latency-5.09%20ms%20(~197%20FPS)-06B6D4?style=for-the-badge)](#physical-raspberry-pi-5-benchmark--telemetry)
-[![Model Size](https://img.shields.io/badge/Model%20Size-2.41%20MB%20(PT2E%20INT8)-8B5CF6?style=for-the-badge)](#exhaustive-model-ablation--trade-off-analysis)
-[![Compliance](https://img.shields.io/badge/MoEFCC%20SWM%202026-100%25%20Statutory%20Compliant-059669?style=for-the-badge)](#-statutory-swm-rules-2026-stream-mapping)
-[![Safety](https://img.shields.io/badge/Battery%20Fire%20Recall-100.0%25%20(Zero%20Fire%20Risk)-EF4444?style=for-the-badge)](#-deterministic-policy-guard-dpg--bayes-risk)
-[![Research Paper](https://img.shields.io/badge/Research%20Paper-Read%20Paper-DC2626?style=for-the-badge&logo=adobeacrobatreader)](docs/RESEARCH_PAPER.md)
-[![Read Online](https://img.shields.io/badge/Read%20Paper-Markdown%20Doc-2563EB?style=for-the-badge&logo=markdown)](docs/IEEE_ECOSORT_EDGE_TECHNICAL_PROPOSAL.md)
-[![License](https://img.shields.io/badge/License-MIT-EAB308?style=for-the-badge)](LICENSE)
-[![CI Smoke Test](https://img.shields.io/github/actions/workflow/status/DK-A/EcoSort-Edge-Offline-Waste-Sorting-Food-Categorisation-using-ExecuTorch-on-Raspberry-Pi/smoke_test.yml?branch=main&label=CI%20Smoke%20Test&style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com/DK-A/EcoSort-Edge-Offline-Waste-Sorting-Food-Categorisation-using-ExecuTorch-on-Raspberry-Pi/actions)
-[![Stress Test](https://img.shields.io/badge/Stress%20Test-Passed%20(Zero%20Leaks)-059669?style=for-the-badge)](docs/RELIABILITY_AND_STRESS_TESTS.md)
+<p align="center">
+  <a href="https://github.com/DK-A/EcoSort-Edge-Offline-Waste-Sorting-Food-Categorisation-using-ExecuTorch-on-Raspberry-Pi"><img src="https://img.shields.io/badge/Hackathon-Namma%20AI%20Track%203%20(Sustainability)-10B981?style=flat-square&logo=arm" alt="Track"></a>
+  <a href="https://www.raspberrypi.com"><img src="https://img.shields.io/badge/Hardware-Raspberry%20Pi%205%20(Cortex--A76)-3B82F6?style=flat-square&logo=raspberrypi" alt="Hardware"></a>
+  <a href="https://pytorch.org/executorch"><img src="https://img.shields.io/badge/Runtime-Arm%20ExecuTorch%201.5.1-6366F1?style=flat-square&logo=pytorch" alt="Runtime"></a>
+  <a href="#physical-raspberry-pi-5-benchmark--telemetry"><img src="https://img.shields.io/badge/Latency-5.09%20ms%20(~197%20FPS)-06B6D4?style=flat-square" alt="Latency"></a>
+  <a href="#exhaustive-model-ablation--trade-off-analysis"><img src="https://img.shields.io/badge/Model%20Size-2.41%20MB%20(PT2E%20INT8)-8B5CF6?style=flat-square" alt="Size"></a>
+</p>
+<p align="center">
+  <a href="https://github.com/DK-A/EcoSort-Edge-Offline-Waste-Sorting-Food-Categorisation-using-ExecuTorch-on-Raspberry-Pi/actions"><img src="https://img.shields.io/github/actions/workflow/status/DK-A/EcoSort-Edge-Offline-Waste-Sorting-Food-Categorisation-using-ExecuTorch-on-Raspberry-Pi/smoke_test.yml?branch=main&label=CI%20Smoke%20Test&style=flat-square&logo=githubactions&logoColor=white" alt="CI"></a>
+  <a href="docs/RELIABILITY_AND_STRESS_TESTS.md"><img src="https://img.shields.io/badge/Stress%20Test-Passed%20(Zero%20Leaks)-059669?style=flat-square" alt="Stress Test"></a>
+  <a href="#-statutory-swm-rules-2026-stream-mapping"><img src="https://img.shields.io/badge/MoEFCC%20SWM%202026-100%25%20Compliant-059669?style=flat-square" alt="Compliance"></a>
+  <a href="#-deterministic-policy-guard-dpg--bayes-risk"><img src="https://img.shields.io/badge/Battery%20Fire%20Recall-100%25-EF4444?style=flat-square" alt="Safety"></a>
+  <a href="docs/RESEARCH_PAPER.md"><img src="https://img.shields.io/badge/Research%20Paper-IEEE%20Format-DC2626?style=flat-square&logo=adobeacrobatreader" alt="Paper"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-EAB308?style=flat-square" alt="License"></a>
+</p>
 
 > **Official Solution for Problem Statement 3:** Edge-Based Waste Sorting and Food Categorisation  
 > **Organized by:** NASSCOM CoE IoT & AI, Arm Developer Ecosystem, IIIT-Bangalore, UK Govt TSI  
