@@ -17,7 +17,7 @@
 
 ## Live Physical Benchmark Execution (Dual-View Jury Showcase)
 
-Watch the synchronized dual-feed demonstration showing the **physical camera hopper view** simultaneously alongside the **live Raspberry Pi 5 Arm Cortex-A76 terminal execution**, achieving **100.00% Statutory Compliance**, **100.0% Battery Hazard Recall**, and **5.09 ms Inference Latency** operating at **49.9°C**:
+Watch the synchronized dual-feed demonstration showing the **physical camera hopper view** simultaneously alongside the **live Raspberry Pi 5 Arm Cortex-A76 terminal execution**, achieving **100.00% Statutory Compliance (30/30)** on this physical benchmark suite, **3/3 Battery Hazard Capture** (noting n = 3 gives a wide 95% CI of 43.9%–100.0%), **5.09 ms Model Runtime** (11.85 ms end-to-end harness latency), and stable operation at **49.9°C**:
 
 ![EcoSort-Edge Physical & Edge AI Live Jury Demonstration](assets/jury_showcase_panel.gif)
 
@@ -47,7 +47,7 @@ EcoSort-Edge enforces an architectural dual-guard paradigm: **"Edge Vision Perce
       ├── MobileNetV3-Small INT8 ──────► 1.53M Parameters (2.41 MB .pte Binary)
       ├── Arm Cortex-A76 Hardware ─────► Armv8.2-A NEON SIMD + SDOT (Signed Dot Product)
       ├── XNNPACK Operator Fusion ─────► Conv2d + BatchNorm2d + Hardswish Single Microkernel
-      └── L3 Cache Residency ──────────► Resides in 2.0 MB L3 Cache (Zero DRAM Bus Saturation)
+      └── Compact Weight Footprint ────► 2.41 MB Binary Minimizing External Memory Bandwidth
                                           ⚡ Latency: 5.09 ms | ❄️ Core Temp: 49.9°C
       │
   [ STAGE 3: DETERMINISTIC POLICY GUARD (DPG) ]
@@ -77,9 +77,9 @@ In January 2026, the **Ministry of Environment, Forest and Climate Change (MoEFC
 | Failure Dimension | Cloud VLMs / Generative AI (LLaVA / GPT-4o) | EcoSort-Edge Edge AI Appliance |
 | :--- | :--- | :--- |
 | **Connectivity** | Fails completely in basement transfer stations (<-115 dBm deadzones) | **100% Offline Air-Gapped** (0 bytes transmitted) |
-| **Recurring Cost** | Prohibitive API fees (₹25,000–₹75,000/month/kiosk) | **₹0.00 Monthly** (Runs on $142 hardware capex) |
+| **Recurring Cost** | Significant API fees (illustratively ₹25,000–₹1,00,000/yr/kiosk) | **₹0.00 Recurring** (Runs on $85–$110 hardware capex) |
 | **Sorting Latency** | 1.5 to 3.0 seconds (severe queue congestion & citizen abandonment) | **5.09 ms (~197 FPS)** (Instant user feedback) |
-| **Hazard Reliability**| Probabilistic hallucinations route lithium batteries into dry balers | **100.0% Deterministic Recall** via Bayes Cost Guard |
+| **Hazard Reliability**| Cloud models introduce variable latency & false negatives | **96.67% Test Recall** (58/60) with Deterministic Safety Barrier |
 
 ### Statutory Stream Mapping
 | Vision Output Class | Underlying Waste Material | MoEFCC SWM 2026 Stream | Bin Color | Handling & Processing Protocol |
@@ -104,20 +104,20 @@ To justify model selection, we conducted a head-to-head empirical ablation compa
 | Evaluation Parameter | Peer Baseline (V3-Large INT8) | Our Champion (V3-Small INT8) | Winner | Edge Hardware Root-Cause Analysis |
 | :--- | :--- | :--- | :---: | :--- |
 | **Model Architecture** | MobileNetV3-Large | MobileNetV3-Small | **V3-Small** | Optimal compute budget for Cortex-A76 |
-| **Parameter Count** | 4.21 Million parameters | 1.53 Million parameters | **V3-Small** | 63.7% fewer multiply-accumulate operations |
-| **Model Binary Size** | 4.31 MB (.pte binary) | **2.41 MB (.pte binary)** | **V3-Small** | **44.1% smaller**; fits in 2.0 MB CPU cache |
-| **Inference Latency** | 17.19 ms (~58 FPS) | **5.09 ms (~197 FPS)** | **V3-Small** | **3.38× faster**; zero memory bus stalls |
+| **Parameter Count** | 4.21 Million parameters | 1.53 Million parameters | **V3-Small** | 63.7% parameter reduction (~74% fewer MACs) |
+| **Model Binary Size** | 4.31 MB (.pte binary) | **2.41 MB (.pte binary)** | **V3-Small** | **44.1% smaller**; reduces memory bandwidth traffic |
+| **Inference Latency** | 17.19 ms (~58 FPS) | **5.09 ms (~197 FPS)** | **V3-Small** | **3.38× faster**; explained by 3.9x arithmetic MAC ratio |
 | **Class Top-1 Accuracy**| 83.33% (25/30) | 80.00% (24/30) | V3-Large (+3.3%) | Minor raw label lead on benign cardboard/paper |
-| **Statutory 4-Stream Acc.**| 76.67% (23/30) | **100.00% (30/30)** | **V3-Small** | **+23.3% compliance** with SWM Rules 2026 |
-| **Battery Hazard Recall**| 0.0% (0/3 FAILED) | **100.0% (3/3 PASSED)** | **V3-Small** | Large memorized background; Small caught all |
-| **Multi-Layer Packaging**| Confused with PET/vegetables | **100% routed to RDF Dry** | **V3-Small** | Crisp discrimination of metallized film layers |
+| **Statutory 4-Stream Acc.**| 76.67% (23/30) | **100.00% (30/30)** | **V3-Small** | 2 Large samples held by entropy guard (H>2.0) |
+| **Battery Hazard Recall**| 0.0% (0/3 captured) | **100.0% (3/3 captured)** | **V3-Small** | Small caught 3/3; n=3 CI is wide (43.9–100%) |
+| **Multi-Layer Packaging**| Confused with PET/vegetables | **2/4 RDF (4/4 Dry)** | **V3-Small** | Items 18 & 20 predicted metal_can (retaining Dry) |
 | **Operating Core Temp** | ~58.4°C (rising under load) | **49.9°C (stable)** | **V3-Small** | **30.1°C headroom** below 80°C throttle limit |
-| **Peak Memory (RSS)** | 712.0 MB | **526.4 MB** | **V3-Small** | 26.1% reduced DRAM bus pressure |
+| **Peak Memory (RSS)** | 712.0 MB | **526.4 MB** | **V3-Small** | 185.6 MB lower process RSS (includes Python runtime) |
 
-### Why Bigger Is NOT Better on Single-Board Computers
-1. **Cache Residency vs. Bus Contention:** The Raspberry Pi 5 has a 2.0 MB shared L3 cache. At **2.41 MB**, MobileNetV3-Small resides almost entirely within high-speed CPU cache lines. MobileNetV3-Large (**4.31 MB**) continuously thrashes cache lines, causing frequent LPDDR4X memory roundtrips that quadruple latency from 5.09 ms to 17.19 ms.
-2. **Lethal Battery Misclassifications:** MobileNetV3-Large misclassified `item_02_battery_02.jpg` as "cardboard (31.2%)". In an industrial waste facility, feeding a lithium cell into a hydraulic dry waste baler causes cell rupture and chemical fire. MobileNetV3-Small achieved **100.0% hazard recall** with 90.4% to 98.0% confidence.
-3. **Thermal Headroom for 24/7 Shed Deployment:** MobileNetV3-Small runs stably at **49.9°C**, leaving a **30.1°C safety margin** below the 80°C throttling ceiling, preventing thermal slowdowns in non-air-conditioned Indian municipal sheds.
+### Architectural Analysis: Small vs. Large on Arm Cortex-A76
+1. **Compute Complexity (MACs) Governs Latency:** MobileNetV3-Small requires ~56 Million multiply-accumulates compared to ~219 Million MACs for MobileNetV3-Large (~3.9× compute ratio). This arithmetic scaling directly explains the 3.38× measured latency gap on CPU (5.09 ms vs 17.19 ms), with Small's compact 2.41 MB binary also reducing external memory traffic.
+2. **Hazard Capture on Benchmark Suite:** On the 30-sample physical suite, MobileNetV3-Large misclassified `item_02_battery_02.jpg` as "cardboard (31.2%)". MobileNetV3-Small successfully captured all three battery samples (90.4% to 98.0% confidence), though statistical rigor requires testing on larger sample sizes (n=3 yields a 95% Wilson CI of 43.9%–100.0%).
+3. **Thermal Headroom for 24/7 Deployment:** MobileNetV3-Small operated stably at **49.9°C** across the benchmark, providing a **30.1°C safety margin** below the 80°C throttling ceiling.
 
 ---
 
@@ -142,7 +142,7 @@ Quantizing the model via ExecuTorch's XNNPACK backend with per-channel symmetric
 ## Model Evaluation, Confusion Matrix & Training Analytics
 
 ### 1. Normalized Confusion Matrix (9-Class Holdout Split)
-Evaluated across the 1,210-image holdout test split. Notice **96.7% Battery Recall** with zero misrouting into combustible or dry recyclable compactor streams:
+Evaluated across the 1,210-image holdout test split. Top-1 accuracy is **88.51% (1,071/1,210)**, statutory 4-stream accuracy is **98.35% (1,190/1,210; 95% CI 97.5–98.9%)**, and battery hazard recall is **96.67% (58/60; 95% CI 88.6–99.1%)** with 2 battery samples misclassified into dry recyclable categories:
 
 ![EcoSort-Edge Confusion Matrix](assets/confusion_matrix.png)
 
@@ -157,7 +157,7 @@ Granular performance across all 9 municipal waste classes aligned with India MoE
 ![EcoSort-Edge Per-Class Performance](assets/per_class_performance.png)
 
 ### 4. Comprehensive Model Ablation (Champion V3-Small vs Peer V3-Large)
-Empirical evidence on Raspberry Pi 5 CPU showing why MobileNetV3-Small eliminates cache thrashing, achieves 3.4× lower latency, and prevents compactor fires:
+Empirical evidence on Raspberry Pi 5 CPU showing that MobileNetV3-Small delivers 3.4× lower latency, 44% smaller binary footprint, and superior hazard interception on the 30-sample suite:
 
 ![EcoSort-Edge Model Ablation](assets/model_ablation_comparison.png)
 

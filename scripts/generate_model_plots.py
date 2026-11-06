@@ -50,8 +50,8 @@ def plot_confusion_matrix(data):
 
     ax.set_xlabel("Predicted Class", color='#38BDF8', fontsize=12, fontweight='bold', labelpad=10)
     ax.set_ylabel("Ground Truth Class", color='#38BDF8', fontsize=12, fontweight='bold', labelpad=10)
-    ax.set_title("EcoSort-Edge: Normalized Confusion Matrix (MobileNetV3-Small INT8)\nOverall Test Accuracy: 88.51% | Statutory Stream Compliance: 100.00%",
-                 color='#F9FAFB', fontsize=12.5, fontweight='bold', pad=15)
+    ax.set_title("EcoSort-Edge: Normalized Confusion Matrix (MobileNetV3-Small INT8)\nTest Top-1: 88.51% (1,071/1,210) | Statutory Stream Accuracy: 98.35% (1,190/1,210)",
+                 color='#F9FAFB', fontsize=12, fontweight='bold', pad=15)
 
     thresh = cm_norm.max() / 2.0
     for i in range(len(CLASSES)):
@@ -101,8 +101,8 @@ def plot_training_curves(data):
     ax2.legend(loc='lower right', facecolor='#1E293B', edgecolor='#374151', labelcolor='white')
 
     plt.suptitle("EcoSort-Edge: 16-Epoch Training Progression (224x224 Baseline -> 256x256 Progressive Resizing)",
-                 color='#F9FAFB', fontsize=13, fontweight='bold', y=1.02)
-    plt.tight_layout()
+                 color='#F9FAFB', fontsize=12.5, fontweight='bold', y=0.98)
+    plt.tight_layout(rect=[0, 0, 1, 0.94])
     out_path = ASSETS_DIR / "training_curves.png"
     plt.savefig(out_path, dpi=200, facecolor=fig.get_facecolor(), edgecolor='none')
     plt.close()
@@ -125,7 +125,7 @@ def plot_per_class_performance(data):
     rects3 = ax.bar(x + width, f1, width, label='F1-Score', color='#A855F7', edgecolor='#7C3AED', linewidth=1)
 
     # Highlight battery safety recall bar
-    ax.annotate('96.7% Recall\n(Zero Fire Risk)',
+    ax.annotate('96.7% Recall\n(58/60 Intercepted)',
                 xy=(x[0], recall[0]), xytext=(x[0] + 0.1, recall[0] + 5),
                 arrowprops=dict(facecolor='#EF4444', shrink=0.08, width=1.5, headwidth=6),
                 color='#EF4444', fontsize=9, fontweight='bold', ha='center')
@@ -182,9 +182,9 @@ def plot_model_ablation_comparison():
                     f"{height:.2f} {units[idx]}" if units[idx] in ["ms", "MB"] else f"{height:.1f}{units[idx]}",
                     ha='center', va='bottom', color='#F9FAFB', fontsize=8.5, fontweight='bold')
 
-    plt.suptitle("Empirical Model Ablation on Raspberry Pi 5 CPU: MobileNetV3-Small INT8 vs. Peer MobileNetV3-Large INT8\nEmpirical Proof: MobileNetV3-Small eliminates cache thrashing, achieves 3.4x lower latency, and prevents compactor fires",
-                 color='#F9FAFB', fontsize=12, fontweight='bold', y=1.03)
-    plt.tight_layout()
+    plt.suptitle("Empirical Model Ablation on Raspberry Pi 5 CPU: MobileNetV3-Small INT8 vs. Peer MobileNetV3-Large INT8\nMobileNetV3-Small delivers 3.4x lower latency, 44% smaller footprint, and superior hazard interception on 30-sample suite",
+                 color='#F9FAFB', fontsize=11.5, fontweight='bold', y=0.98)
+    plt.tight_layout(rect=[0, 0, 1, 0.93])
     out_path = ASSETS_DIR / "model_ablation_comparison.png"
     plt.savefig(out_path, dpi=200, facecolor=fig.get_facecolor(), edgecolor='none')
     plt.close()
