@@ -7,6 +7,8 @@
 [![Model Size](https://img.shields.io/badge/Model%20Size-2.41%20MB%20(PT2E%20INT8)-8B5CF6?style=for-the-badge)](#exhaustive-model-ablation--trade-off-analysis)
 [![Compliance](https://img.shields.io/badge/MoEFCC%20SWM%202026-100%25%20Statutory%20Compliant-059669?style=for-the-badge)](#-statutory-swm-rules-2026-stream-mapping)
 [![Safety](https://img.shields.io/badge/Battery%20Fire%20Recall-100.0%25%20(Zero%20Fire%20Risk)-EF4444?style=for-the-badge)](#-deterministic-policy-guard-dpg--bayes-risk)
+[![Research Paper](https://img.shields.io/badge/Research%20Paper-IEEE%20PDF-DC2626?style=for-the-badge&logo=adobeacrobatreader)](THEME_3_NAMMA_AI.pdf)
+[![License](https://img.shields.io/badge/License-MIT-EAB308?style=for-the-badge)](LICENSE)
 
 > **Official Solution for Problem Statement 3:** Edge-Based Waste Sorting and Food Categorisation  
 > **Organized by:** NASSCOM CoE IoT & AI, Arm Developer Ecosystem, IIIT-Bangalore, UK Govt TSI  
@@ -264,10 +266,25 @@ python evaluate_pipeline.py --daemon
 
 ---
 
-## IEEE Technical Proposal Document
+## IEEE Technical Proposal & Research Paper
 
 For full mathematical proofs, quantization derivation, and comprehensive engineering defense, refer to the official Microsoft Word Document:  
-👉 **[EcoSort_Edge_IEEE_Technical_Proposal.docx](EcoSort_Edge_IEEE_Technical_Proposal.docx)** (12 pages, 4,560 words, 7 structured tables)
+* 📄 **[THEME_3_NAMMA_AI.pdf](THEME_3_NAMMA_AI.pdf)** *(Official 9-page research paper — viewable directly on GitHub)*
+* 📝 **[EcoSort_Edge_IEEE_Technical_Proposal.docx](EcoSort_Edge_IEEE_Technical_Proposal.docx)** *(Extended 12-page Microsoft Word proposal with 7 structured tables)*
+
+### BibTeX Citation
+
+If you use this benchmark suite, models, or policy guard architecture in your work, please cite:
+
+```bibtex
+@inproceedings{ecosort_edge_2026,
+  title={EcoSort-Edge: Real-Time Offline Edge AI for Municipal Waste Sorting and Food Categorisation using ExecuTorch on Raspberry Pi 5},
+  author={EcoSort-Edge Research and Engineering Team},
+  booktitle={Namma AI Hackathon — Track 3: AI for Sustainability},
+  organization={NASSCOM CoE IoT & AI, Arm Developer Ecosystem, IIIT-Bangalore, UK Govt TSI},
+  year={2026}
+}
+```
 
 ---
 
